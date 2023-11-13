@@ -1,10 +1,11 @@
 class MiClase:
-    def __init__(self, Valencia, Tempo, Tonos, listaCanciones, listaBailabilidad):
+    def __init__(self, Valencia, Tempo, Tonos, listaCanciones, listaBailabilidad, listaNumEnteros):
         self.Valencia = Valencia
         self.Tempo = Tempo
         self.Tonos = Tonos
         self.listaCanciones = listaCanciones
         self.listaBailabilidad = listaBailabilidad
+        self.listaNumEnteros = listaNumEnteros
 
     def ObtieneValencia(self, numero):
         # Convierte el número en una cadena para contar los dígitos impares
@@ -25,12 +26,16 @@ class MiClase:
         if any(song is None for song in lista):
             return False
         return True
+    def Encuentra(self, lista, elemento):
+        return elemento in lista
+
 #################################################################
 #Ejemplo de ejecución
 # Crear un objeto de la clase MiClase
-objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7], [1, 2, 3])
 # Ejemplo de uso de los métodos
 print(objeto.ObtieneValencia(1234567))  # Debería imprimir 4
 print(objeto.DivisibleTempo(10))  # Debería imprimir [1, 2, 5, 10]
 print(objeto.ObtieneMasBailable([0.8, 0.9, 0.7]))  # Debería imprimir 0.9
 print(objeto.VerificaListaCanciones(["Canción 1", "Canción 2", "Canción 3"]))  # Debería imprimir True
+print(objeto.Encuentra(objeto.listaNumEnteros, 3))

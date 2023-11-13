@@ -4,7 +4,7 @@ from Examen2 import MiClase
 
 class UnitTest(unittest.TestCase):
     def setUp(self):
-        self.objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7])
+        self.objeto = MiClase(5, 120, 12, ["Canción 1", "Canción 2", "Canción 3"], [0.8, 0.9, 0.7], [1, 2, 3])
 
     def testObtieneValencia1(self):
         resultado = self.objeto.ObtieneValencia(1234567)
