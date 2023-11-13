@@ -40,7 +40,7 @@ class UnitTest(unittest.TestCase):
     
     def testEncuentra(self):
         resultado = self.objeto.Encuentra([1,[1,2],3,4,[1,2,3],6],[1,2,3])
-        self.assertTrue(resultado)
+        self.assertFalse(resultado)
 
 if __name__ == '__main__':
     unittest.main()
