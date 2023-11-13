@@ -37,7 +37,10 @@ class UnitTest(unittest.TestCase):
     def testVerificaListaCanciones2(self):
         resultado = self.objeto.VerificaListaCanciones(["Canción 1", "Canción 2", None])
         self.assertFalse(resultado)
-
+    
+    def testEncuentra(self):
+        resultado = self.objeto.Encuentra([1,[1,2],3,4,[1,2,3],6],[1,2,3])
+        self.assertTrue(resultado)
 
 if __name__ == '__main__':
     unittest.main()
